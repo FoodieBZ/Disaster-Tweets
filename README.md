@@ -36,9 +36,11 @@ e.   Count the positive and negatives, whatever wins: <br>
 >> &nbsp; &nbsp; &nbsp; &nbsp; 	1. If there is a tie between positive and negative, it is suppose to pick the closest one (as of right now, it does not work for even k values) <br>
 
 &nbsp; &nbsp; &nbsp; &nbsp;e.	Add to predict array (for getting to write to a csv file) and prediction file (backup in case something happens to the predict array) <br>
+<br>
 
       Predict_file(file1, c, y_test) 
-- This function uses the sample submission file to get the Ids, and creates a dataframe. It then adds the targeted predictions into a column. Then makes a predict.csv file.
+- This function uses the sample submission file to get the Ids, and creates a dataframe. It then adds the targeted predictions into a column. Then makes a predict.csv file. 
+<br>
 
       Main 
 - It tries 5 sklearn classifiers, gathers the F1 scores of each classifier and times it. A table of F1 scores is then printing. It then creates a predict file for BernoullinNB, which has the highest F1 score on the data. The random state is 0. Separately, tries KNN and creates a predict file. KNN has been commented out. Since, it takes a long time. 
